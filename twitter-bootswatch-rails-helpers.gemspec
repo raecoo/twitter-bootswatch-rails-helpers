@@ -9,8 +9,9 @@ Gem::Specification.new do |gem|
   gem.authors       = ["Scott V. Rosenthal"]
   gem.email         = ["sr7575@gmail.com"]
   gem.homepage      = "https://github.com/scottvrosenthal/twitter-bootswatch-rails-helpers"
-  gem.description   = %q{View helpers for use with the twitter-bootswatch-rails.gem}
-  gem.summary       = %q{View helpers for use with the twitter-bootswatch-rails.gem - breadcrumbs}
+  gem.summary       = %q{Twitter Bootswatch Rails Helpers gem for use with the twitter-bootswatch-rails.gem}
+  gem.description   = %q{twitter-bootswatch-rails-helpers gem provides common view helpers for use with the twitter-bootswatch-rails.gem}
+
 
   gem.rubyforge_project = "twitter-bootswatch-rails-helpers"
 
