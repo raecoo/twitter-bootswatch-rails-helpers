@@ -28,7 +28,7 @@ Please view the [demo](https://github.com/scottvrosenthal/twitter-bootswatch-rai
 
 Alerts:
 
-```ruby
+```erb
 <%= bootswatch_flash_container(:default, %Q{<h4>Alert block</h4><p>Best check yo self, you're not looking too good. Nulla vitae elit libero, a pharetra augue. Praesent commodo cursus magna, vel scelerisque nisl consectetur et.</p>}.html_safe, alert_block=true) %>
 <%= bootswatch_flash_container(:success, %Q{<strong>Success</strong> You successfully read this important alert message.}.html_safe) %>
 <%= bootswatch_flash_container(:error, %Q{<strong>Error</strong> Change a few things up and try submitting again.}.html_safe) %>
@@ -36,14 +36,17 @@ Alerts:
 
 Breadcrumbs:
 
-```ruby
-# in the action of your controller
+Place an add_breadcrumb call in the action of your controller:
 
+```ruby
 def index
   add_breadcrumb "Test link", root_path
 end
+```
 
-# at the top of the view or where you want it to render
+Place a call to the bootswatch_breadcrumbs helper at the top of the view or where you want it to render:
+
+```erb
 <%= bootswatch_breadcrumbs %>
 ```
 
