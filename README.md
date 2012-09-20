@@ -44,10 +44,10 @@ def index
 end
 ```
 
-Place a call to the bootswatch_breadcrumbs helper at the top of the view or where you want it to render:
+Place a call to the render_breadcrumbs helper at the top of the view or where you want it to render:
 
 ```erb
-<%= bootswatch_breadcrumbs %>
+<%= render_breadcrumbs %>
 ```
 
 
