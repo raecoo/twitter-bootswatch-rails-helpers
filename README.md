@@ -7,8 +7,8 @@
 
 Add this line to your application's Gemfile:
 
-    gem 'twitter-bootswatch-rails', '~> 2.1.1.0'
-    gem 'twitter-bootswatch-rails-helpers', '~> 2.1.1.1'
+    gem 'twitter-bootswatch-rails'
+    gem 'twitter-bootswatch-rails-helpers'
 
 And then execute:
 
