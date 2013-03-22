@@ -29,9 +29,18 @@ Please view the [demo](https://github.com/scottvrosenthal/twitter-bootswatch-rai
 Alerts:
 
 ```erb
-<%= bootswatch_flash_container(:default, %Q{<h4>Alert block</h4><p>Best check yo self, you're not looking too good. Nulla vitae elit libero, a pharetra augue. Praesent commodo cursus magna, vel scelerisque nisl consectetur et.</p>}.html_safe, alert_block=true) %>
-<%= bootswatch_flash_container(:success, %Q{<strong>Success</strong> You successfully read this important alert message.}.html_safe) %>
-<%= bootswatch_flash_container(:error, %Q{<strong>Error</strong> Change a few things up and try submitting again.}.html_safe) %>
+<%= bootswatch_flash_container(:default, true) do %>
+  <h4>Alert block</h4><p>Best check yo self, you're not looking too good. Nulla vitae elit libero, a pharetra augue. Praesent commodo cursus magna, vel scelerisque nisl consectetur et.</p>
+<% end %>
+<%= bootswatch_flash_container(:success) do %>
+  <strong>Success</strong> You successfully read this important alert message.
+<% end %>
+<%= bootswatch_flash_container(:error) do %>
+  <strong>Error</strong> Change a few things up and try submitting again.
+<% end %>
+<%= bootswatch_flash_container(:info) do %>
+  <strong>Information</strong> This alert needs your attention, but it's not super important.
+<% end %>
 ```
 
 Breadcrumbs:
