@@ -1,16 +1,15 @@
-# Twitter Bootswatch Rails Helpers gem
+# Twitter Bootswatch Rails 2.3.2 Helpers gem
 
-  - Requires [twitter-bootswatch-rails](https://github.com/scottvrosenthal/twitter-bootswatch-rails)
+  - Requires [twitter-bootswatch-rails](https://github.com/scottvrosenthal/twitter-bootswatch-railstree/2.3.2)
   - Provides view helpers for twitter bootstrap's alerts and breadcrumbs
 
 ## Installing Gem
 
 Add this line to your application's Gemfile:
 
-    gem 'twitter-bootswatch-rails', '>= 2.3.2'
+    gem 'twitter-bootswatch-rails', '~> 2.3.2'
 
-    # always include after the main gem in your Gemfile
-    gem 'twitter-bootswatch-rails-helpers', '>= 2.3.2'
+    gem 'twitter-bootswatch-rails-helpers'
 
 And then execute:
 
@@ -20,13 +19,8 @@ Or install it yourself as:
 
     $ gem install twitter-bootswatch-rails-helpers
 
-## Demo
-
-The [demo](https://github.com/scottvrosenthal/twitter-bootswatch-rails-demo) will show you how this gem can be used.
 
 ## Usages
-
-Please view the [demo](https://github.com/scottvrosenthal/twitter-bootswatch-rails-demo) project to see some examples on how to use these view helpers
 
 Alerts:
 
