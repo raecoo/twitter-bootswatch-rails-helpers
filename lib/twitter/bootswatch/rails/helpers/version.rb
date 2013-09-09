@@ -2,7 +2,7 @@ module Twitter
   module Bootswatch
     module Rails
       module Helpers
-        VERSION = '2.3.2.1'
+        VERSION = '3.0.0.0'
       end
     end
   end

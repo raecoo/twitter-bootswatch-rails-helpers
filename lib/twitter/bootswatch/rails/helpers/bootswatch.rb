@@ -1,2 +1,2 @@
-require "twitter/bootswatch/rails/helpers/engine"
-require "twitter/bootswatch/rails/helpers/version"
+require 'twitter/bootswatch/rails/helpers/engine'
+require 'twitter/bootswatch/rails/helpers/version'

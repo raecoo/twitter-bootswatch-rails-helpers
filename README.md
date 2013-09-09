@@ -1,13 +1,15 @@
-# Twitter Bootswatch Rails 2.3.2 Helpers gem
+# Bootswatch Rails 3.0.0 Helpers gem
 
-  - Requires [twitter-bootswatch-rails](https://github.com/scottvrosenthal/twitter-bootswatch-railstree/2.3.2)
-  - Provides view helpers for twitter bootstrap's alerts and breadcrumbs
+[![Build Status](https://www.travis-ci.org/scottvrosenthal/twitter-bootswatch-rails-helpers.png?branch=master)](https://www.travis-ci.org/scottvrosenthal/twitter-bootswatch-rails-helpers)
+
+  - Requires [twitter-bootswatch-rails](https://github.com/scottvrosenthal/twitter-bootswatch-rails/)
+  - Provides rails view helpers for [Twitter Bootstrap](http://getbootstrap.com/) alerts and breadcrumbs
 
 ## Installing Gem
 
 Add this line to your application's Gemfile:
 
-    gem 'twitter-bootswatch-rails', '~> 2.3.2'
+    gem 'twitter-bootswatch-rails', '~> 3.0.0'
 
     gem 'twitter-bootswatch-rails-helpers'
 
@@ -22,7 +24,37 @@ Or install it yourself as:
 
 ## Usages
 
+Flashes:
+
+```ruby
+def index
+  # alert-warning
+  flash[:warning] = "Test warning flash" # or flash[:default]
+
+  # alert-warning
+  flash[:default] = %Q{<strong>Warning</strong> This <a href="#" class="alert-link">alert</a> needs your attention, but it's not super important.}.html_safe
+
+  # alert-success
+  flash[:notice] = "Test warning flash" # or flash[:success]
+
+  # alert-info
+  flash[:info] = "Test info flash"
+
+  # alert-danger
+  flash[:error] = "Test error flash" # or flash[:alert]
+
+end
+
+```
+The view helper then loops through current flash object:
+
+```erb
+  <%= bootswatch_flash %>
+```
+
 Alerts:
+
+For manual alerts that don't use the flash object:
 
 ```erb
 <%= bootswatch_flash_container(:default, true) do %>
@@ -35,7 +67,7 @@ Alerts:
   <strong>Error</strong> Change a few things up and try submitting again.
 <% end %>
 <%= bootswatch_flash_container(:info) do %>
-  <strong>Information</strong> This alert needs your attention, but it's not super important.
+  <strong>Information</strong> This <a href="#" class="alert-link">alert</a> needs your attention, but it's not super important.
 <% end %>
 ```
 
@@ -45,7 +77,9 @@ Place an add_breadcrumb call in the action of your controller:
 
 ```ruby
 def index
-  add_breadcrumb "Test link", root_path
+  add_breadcrumb I18n.t('navigation.settings'), admin_settings_path
+
+  add_breadcrumb I18n.t('definitions.index.title'), admin_definitions_path
 end
 ```
 
