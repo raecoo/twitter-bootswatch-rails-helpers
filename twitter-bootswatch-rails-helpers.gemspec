@@ -6,7 +6,6 @@ require 'twitter/bootswatch/rails/helpers/version'
 Gem::Specification.new do |gem|
   gem.name          = 'twitter-bootswatch-rails-helpers'
   gem.version       = Twitter::Bootswatch::Rails::Helpers::VERSION
-  gem.required_ruby_version = '>= 1.9.3'
   gem.required_rubygems_version = '>= 1.8.11'
   gem.authors       = ["Scott V. Rosenthal"]
   gem.email         = ["sr7575@gmail.com"]
